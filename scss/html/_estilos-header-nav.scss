@@ -1,0 +1,9 @@
+header nav div h1 {
+    display: inline-block;
+    width: 10%;
+  
+    .empresa-logo {
+      width: 100%;
+      object-fit: cover;
+    }
+  }

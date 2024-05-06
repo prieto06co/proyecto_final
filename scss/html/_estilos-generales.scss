@@ -1,0 +1,14 @@
+@import "../utilidades/variables-listas-dicionarios";
+
+body {
+  background-color: map-get($colors, body);
+}
+
+.index,
+.acerca-de {
+  background-color: map-get($colors, container);
+}
+
+main {
+  margin: $margin-main;
+}

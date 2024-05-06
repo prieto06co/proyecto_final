@@ -1,0 +1,17 @@
+@import "../utilidades/variables-listas-dicionarios";
+// Estilos de Footer
+//-----------------------------------------------------
+footer {
+    background-color: map-get($colors, footer);
+    @include flex;
+    text-align: center;
+    color: map-get($colors, footer-text);
+    align-items: center;
+    border-radius: nth($border-list, 2 );
+    flex-wrap: wrap;
+  
+    ul {
+      list-style: none;
+      margin-right: 35px;
+    }
+  }

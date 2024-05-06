@@ -1,0 +1,114 @@
+@import "../utilidades/variables-listas-dicionarios";
+@import "../utilidades/mixin";
+// Estilos para el index o pagina principal
+//-----------------------------------------------------
+.index {
+    @include height-grid(90vh, grid);
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 10% 40% 10% 20% 20%;
+    margin: 0 7%;
+    align-content: center;
+    border-radius: nth($border-list, 2 );
+    border-style: nth($border-list, 1 );
+    border-color: map-get($colors, border);
+  
+    .grid-item {
+      display: none;
+    }
+  
+    div a {
+      .ofertas {
+        border-radius: nth($border-list, 3 );
+      }
+  
+      .img1,
+      .img2,
+      .img3,
+      .img4 {
+        border-style: nth($border-list, 1 );
+        border-color: map-get($colors, border);
+        &.img1 {
+          border-radius: map-get($images-border, first);
+        }
+        &.img2 {
+          border-radius: map-get($images-border, second);
+        }
+        &.img3 {
+          border-radius: map-get($images-border, third);
+        }
+        &.img4 {
+          border-radius: map-get($images-border, Fourth);
+        }
+      }
+  
+      img {
+        @include img;
+        object-fit: fill;
+     }
+    }
+  
+    .categorias {
+      @include flex;
+    }
+  
+    div h2 {
+      text-align: center;
+      display: inline-block;
+      border-style: hidden;
+      border-color: #7e7e7e83;
+      background-color: #cacaca;;
+      color: #F8F9FA;
+      -webkit-text-stroke-width: 0.2px; /* Grosor del borde */
+      -webkit-text-stroke-color: #717275; 
+      border-radius: nth($border-list, 3 );
+      font-size: 1.3rem;
+      padding: 15px 10px 10px 10px;
+    }
+  
+    .descuentos {
+      grid-column: 2 span;
+      margin-bottom: 1.8%;
+    }
+  
+    .categorias {
+      grid-column: 2 span;
+    }
+  }
+  // Estilos Tablet
+@media screen and (min-width: 600px) {
+    .index {
+      @include height-grid(80vh, grid);  
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 10% 30% 10% 20% 20%;
+      padding: 0;
+      padding: 0 8%;
+      align-content: center;
+    }
+  
+    .index .categorias {
+      grid-column: 4 span;
+    }
+  
+    .index .grid-item {
+      display: block;
+    }
+  }
+  
+  // Media Query de Desktop
+  @media screen and (min-width: 1024px) {
+    .index {
+      @include height-grid(85vh, grid);
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 9% 32% 9% 25% 25%;
+      padding: 0 18%;
+      align-content: center;
+    }
+  
+    .index .categorias {
+      grid-column: 4 span;
+    }
+  
+    .index .grid-item {
+      display: block;
+    }
+  }

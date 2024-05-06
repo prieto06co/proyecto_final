@@ -1,0 +1,55 @@
+@import "../utilidades/variables-listas-dicionarios";
+@import "../utilidades/mixin";
+// Estilos para compra de artículo
+//-----------------------------------------------------
+.main-articulos .contenedor-articulo {
+    @include height-grid(70vh, grid);
+    grid-template-rows: 40% 30%;
+    justify-content: space-between;
+    margin: 0 20%;
+    background-color: white;
+    border-style: nth($border-list , 1 );
+    border-radius: nth($border-list , 2 );
+  
+    div img {
+      @include img;
+      max-height: 100%;
+      padding: 20px;
+      border-radius: $border-radius;
+    }
+  
+    .grid-item {
+      display: none;
+    }
+  }
+  
+  @media screen and (min-width: 600px) {
+    .main-articulos .contenedor-articulo {
+      @include height-grid(80vh, grid);
+      grid-template-columns: 65% 35%;
+      grid-template-rows: 50% 30%;
+    }
+  
+    .main-articulos .contenedor-articulo .grid-item {
+      display: block;
+    }
+  
+    .main-articulos .contenedor-articulo .texto {
+      grid-row: 2 span;
+    }
+  }
+  @media screen and (min-width: 990px) {
+    .main-articulos .contenedor-articulo {
+      @include height-grid(80vh, grid);
+      grid-template-columns: 50% 45%;
+      grid-template-rows: 55% 30%;
+    }
+  
+    .main-articulos .contenedor-articulo .grid-item {
+      display: block;
+    }
+  
+    .main-articulos .contenedor-articulo .texto {
+      grid-row: 2 span;
+    }
+  }

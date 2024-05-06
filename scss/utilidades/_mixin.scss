@@ -1,0 +1,13 @@
+@mixin img{
+    width: 100%;
+    max-width: 100%; // Asegura que las imágenes no excedan el ancho del contenedor
+    height: 100%; // Ajusta la altura de las imágenes para que se ajusten a las filas
+}
+@mixin flex{
+    display: flex;
+    justify-content: center;
+}
+@mixin height-grid ($height, $display){
+    height: $height;
+    display: $display;
+}
