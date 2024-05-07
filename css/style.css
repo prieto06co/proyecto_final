@@ -144,7 +144,7 @@ header nav div h1 .empresa-logo {
 }
 @media screen and (min-width: 1400px) {
   .index div h2 {
-    font-size: 10rem;
+    font-size: 20rem;
     padding: 8px 10px 10px 10px;
   }
 }
