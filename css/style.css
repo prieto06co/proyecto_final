@@ -138,13 +138,13 @@ header nav div h1 .empresa-logo {
     display: block;
   }
   .index div h2 {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     padding: 8px 10px 10px 10px;
   }
 }
 @media screen and (min-width: 1400px) {
   .index div h2 {
-    font-size: 2rem;
+    font-size: 3rem;
     padding: 8px 10px 10px 10px;
   }
 }
