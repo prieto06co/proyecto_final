@@ -95,7 +95,7 @@ header nav div h1 .empresa-logo {
   -webkit-text-stroke-color: #717275;
   border-radius: 25%;
   font-size: 1rem;
-  padding: 4px 10px 10px 10px;
+  padding: 6px 10px 10px 10px;
 }
 .index .descuentos {
   grid-column: 2 span;
@@ -107,7 +107,7 @@ header nav div h1 .empresa-logo {
 
 @media screen and (min-width: 600px) {
   .index {
-    height: 80vh;
+    height: 85vh;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 10% 30% 10% 20% 20%;
@@ -136,6 +136,16 @@ header nav div h1 .empresa-logo {
   }
   .index .grid-item {
     display: block;
+  }
+  .index div h2 {
+    font-size: 1.2rem;
+    padding: 8px 10px 10px 10px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .index div h2 {
+    font-size: 2rem;
+    padding: 8px 10px 10px 10px;
   }
 }
 .acerca-de {
