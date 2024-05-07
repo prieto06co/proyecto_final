@@ -95,7 +95,7 @@ header nav div h1 .empresa-logo {
   -webkit-text-stroke-color: #717275;
   border-radius: 25%;
   font-size: 1rem;
-  padding: 8px 10px 10px 10px;
+  padding: 4px 10px 10px 10px;
 }
 .index .descuentos {
   grid-column: 2 span;
