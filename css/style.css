@@ -26,6 +26,128 @@ header nav div h1 .empresa-logo {
   object-fit: cover;
 }
 
+.index {
+  height: 90vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 10% 40% 10% 20% 20%;
+  margin: 0 7%;
+  align-content: center;
+  border-radius: 2%;
+  border-style: solid;
+  border-color: white;
+}
+.index .grid-item {
+  display: none;
+}
+.index div a .ofertas {
+  border-radius: 25%;
+}
+.index div a .img1,
+.index div a .img2,
+.index div a .img3,
+.index div a .img4 {
+  border-style: solid;
+  border-color: white;
+}
+.index div a .img1.img1,
+.index div a .img2.img1,
+.index div a .img3.img1,
+.index div a .img4.img1 {
+  border-radius: 30% 0 0 0;
+}
+.index div a .img1.img2,
+.index div a .img2.img2,
+.index div a .img3.img2,
+.index div a .img4.img2 {
+  border-radius: 0 30% 0 0;
+}
+.index div a .img1.img3,
+.index div a .img2.img3,
+.index div a .img3.img3,
+.index div a .img4.img3 {
+  border-radius: 0 0 0 30%;
+}
+.index div a .img1.img4,
+.index div a .img2.img4,
+.index div a .img3.img4,
+.index div a .img4.img4 {
+  border-radius: 0 0 30% 0;
+}
+.index div a img {
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+.index .categorias {
+  display: flex;
+  justify-content: center;
+}
+.index div h2 {
+  text-align: center;
+  display: inline-block;
+  border-style: hidden;
+  border-color: rgba(126, 126, 126, 0.5137254902);
+  background-color: #cacaca;
+  color: #F8F9FA;
+  -webkit-text-stroke-width: 0.2px; /* Grosor del borde */
+  -webkit-text-stroke-color: #717275;
+  border-radius: 25%;
+  font-size: 1rem;
+  padding: 5px 10px 10px 10px;
+}
+.index .descuentos {
+  grid-column: 2 span;
+  margin-bottom: 1.8%;
+}
+.index .categorias {
+  grid-column: 2 span;
+}
+
+@media screen and (min-width: 600px) {
+  .index {
+    height: 85vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 10% 30% 10% 20% 20%;
+    padding: 0;
+    padding: 0 8%;
+    align-content: center;
+  }
+  .index .categorias {
+    grid-column: 4 span;
+  }
+  .index .grid-item {
+    display: block;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .index {
+    height: 85vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 9% 32% 9% 25% 25%;
+    padding: 0 18%;
+    align-content: center;
+  }
+  .index .categorias {
+    grid-column: 4 span;
+  }
+  .index .grid-item {
+    display: block;
+  }
+  .index div h2 {
+    font-size: 1.5rem;
+    padding: 6px 10px 10px 10px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .index div h2 {
+    font-size: 2rem;
+    padding: 8px 10px 10px 10px;
+  }
+}
 .acerca-de {
   height: 80vh;
   display: grid;
