@@ -7,3 +7,10 @@ header nav div h1 {
       object-fit: cover;
     }
   }
+
+  @media screen and (min-width: 600px) {
+    header nav div h1 {
+      width: 6%;
+    }
+
+  }

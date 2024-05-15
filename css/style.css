@@ -4,13 +4,23 @@
   box-sizing: border-box;
 }
 
+header {
+  min-width: 250px;
+}
+
 body {
   background-color: rgba(182, 180, 180, 0.966);
+  min-width: 250px;
+}
+
+footer {
+  min-width: 250px;
 }
 
 .index,
 .acerca-de {
   background-color: #F8F9FA;
+  min-height: 500px;
 }
 
 main {
@@ -26,22 +36,28 @@ header nav div h1 .empresa-logo {
   object-fit: cover;
 }
 
+@media screen and (min-width: 600px) {
+  header nav div h1 {
+    width: 6%;
+  }
+}
 .index {
-  height: 90vh;
+  height: 85vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 10% 40% 10% 20% 20%;
-  margin: 0 7%;
+  grid-template-rows: 7% 30% 7% 25% 25%;
+  padding: 0 5% 0 5%;
+  margin: 0 5%;
   align-content: center;
   border-radius: 2%;
   border-style: solid;
-  border-color: white;
+  border-color: gray;
 }
 .index .grid-item {
   display: none;
 }
 .index div a .ofertas {
-  border-radius: 25%;
+  border-radius: 15%;
 }
 .index div a .img1,
 .index div a .img2,
@@ -87,15 +103,13 @@ header nav div h1 .empresa-logo {
 .index div h2 {
   text-align: center;
   display: inline-block;
-  border-style: hidden;
-  border-color: rgba(126, 126, 126, 0.5137254902);
-  background-color: #cacaca;
-  color: #F8F9FA;
-  -webkit-text-stroke-width: 0.2px; /* Grosor del borde */
-  -webkit-text-stroke-color: #717275;
-  border-radius: 25%;
-  font-size: 1rem;
-  padding: 5px 10px 10px 10px;
+  border: none;
+  background-color: #c5c5c5;
+  color: #f8f9fa;
+  font-size: 1.2rem;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 .index .descuentos {
   grid-column: 2 span;
@@ -105,12 +119,12 @@ header nav div h1 .empresa-logo {
   grid-column: 2 span;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 500px) {
   .index {
     height: 85vh;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 10% 30% 10% 20% 20%;
+    grid-template-columns: 0.5fr 1fr 1fr 0.5fr;
+    grid-template-rows: 7% 35% 7% 25% 25%;
     padding: 0;
     padding: 0 8%;
     align-content: center;
@@ -122,12 +136,12 @@ header nav div h1 .empresa-logo {
     display: block;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 900px) {
   .index {
     height: 85vh;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 9% 32% 9% 25% 25%;
+    grid-template-columns: 0.7fr 1.3fr 1.3fr 0.7fr;
+    grid-template-rows: 7% 32% 7% 25% 25%;
     padding: 0 18%;
     align-content: center;
   }
@@ -138,18 +152,24 @@ header nav div h1 .empresa-logo {
     display: block;
   }
   .index div h2 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     padding: 6px 10px 10px 10px;
   }
 }
 @media screen and (min-width: 1400px) {
+  .index {
+    height: 85vh;
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr 0.95fr 1.05fr;
+    grid-template-rows: 7% 32% 7% 25% 25%;
+  }
   .index div h2 {
-    font-size: 2rem;
-    padding: 8px 10px 10px 10px;
+    font-size: 1.5rem;
+    padding: 5px 10px 10px 10px;
   }
 }
 .acerca-de {
-  height: 80vh;
+  height: 85vh;
   display: grid;
   grid-template-columns: 15% 70% 15%;
   grid-template-rows: 15% 35% 30%;
@@ -159,7 +179,7 @@ header nav div h1 .empresa-logo {
   padding-top: 10px;
   border-radius: 2%;
   border-style: solid;
-  border-color: white;
+  border-color: gray;
   margin: 0 5%;
   gap: 1%;
 }
@@ -177,8 +197,6 @@ header nav div h1 .empresa-logo {
 
 @media screen and (min-width: 600px) {
   .acerca-de {
-    height: 90vh;
-    display: grid;
     grid-template-rows: 10% 25% 45%;
   }
   .acerca-de .maps iframe {
@@ -186,30 +204,32 @@ header nav div h1 .empresa-logo {
   }
 }
 .main-articulos .contenedor-articulo {
-  height: 70vh;
+  height: 85vh;
   display: grid;
   grid-template-rows: 40% 30%;
   justify-content: space-between;
-  margin: 0 20%;
+  justify-items: center;
+  margin: 0 10%;
   background-color: white;
   border-style: solid;
   border-radius: 2%;
+  border-color: gray;
 }
 .main-articulos .contenedor-articulo div img {
   width: 100%;
   max-width: 100%;
   height: 100%;
   max-height: 100%;
-  padding: 20px;
+  max-width: 450px;
   border-radius: 2%;
 }
 .main-articulos .contenedor-articulo .grid-item {
   display: none;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 550px) {
   .main-articulos .contenedor-articulo {
-    height: 80vh;
+    height: 85vh;
     display: grid;
     grid-template-columns: 65% 35%;
     grid-template-rows: 50% 30%;
@@ -220,10 +240,14 @@ header nav div h1 .empresa-logo {
   .main-articulos .contenedor-articulo .texto {
     grid-row: 2 span;
   }
+  .main-articulos .contenedor-articulo div img {
+    max-height: 100%;
+    max-width: 100%;
+  }
 }
 @media screen and (min-width: 990px) {
   .main-articulos .contenedor-articulo {
-    height: 80vh;
+    height: 85vh;
     display: grid;
     grid-template-columns: 50% 45%;
     grid-template-rows: 55% 30%;

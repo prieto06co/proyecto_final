@@ -1,12 +1,23 @@
 @import "../utilidades/variables-listas-dicionarios";
 
+header{
+  min-width: 250px;
+}
+
 body {
   background-color: map-get($colors, body);
+  min-width: 250px;
+  
+}
+
+footer{
+  min-width: 250px;
 }
 
 .index,
 .acerca-de {
   background-color: map-get($colors, container);
+  min-height: 500px;
 }
 
 main {

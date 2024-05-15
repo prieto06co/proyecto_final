@@ -3,18 +3,20 @@
 // Estilos para compra de artículo
 //-----------------------------------------------------
 .main-articulos .contenedor-articulo {
-    @include height-grid(70vh, grid);
+    @include height-grid(85vh, grid);
     grid-template-rows: 40% 30%;
     justify-content: space-between;
-    margin: 0 20%;
+    justify-items: center;
+    margin: 0 10%;
     background-color: white;
     border-style: nth($border-list , 1 );
     border-radius: nth($border-list , 2 );
+    border-color: map-get($colors, footer-text);
   
     div img {
       @include img;
       max-height: 100%;
-      padding: 20px;
+      max-width: 450px;
       border-radius: $border-radius;
     }
   
@@ -23,9 +25,9 @@
     }
   }
   
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 550px) {
     .main-articulos .contenedor-articulo {
-      @include height-grid(80vh, grid);
+      @include height-grid(85vh, grid);
       grid-template-columns: 65% 35%;
       grid-template-rows: 50% 30%;
     }
@@ -37,10 +39,14 @@
     .main-articulos .contenedor-articulo .texto {
       grid-row: 2 span;
     }
+    .main-articulos .contenedor-articulo div img {
+      max-height: 100%;
+      max-width: 100%;
+    }
   }
   @media screen and (min-width: 990px) {
     .main-articulos .contenedor-articulo {
-      @include height-grid(80vh, grid);
+      @include height-grid(85vh, grid);
       grid-template-columns: 50% 45%;
       grid-template-rows: 55% 30%;
     }
