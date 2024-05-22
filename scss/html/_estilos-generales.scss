@@ -15,7 +15,8 @@ footer{
 }
 
 .index,
-.acerca-de {
+.acerca-de,
+.pag_construccion {
   background-color: map-get($colors, container);
   min-height: 500px;
 }

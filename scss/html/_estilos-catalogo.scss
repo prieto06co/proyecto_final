@@ -1,0 +1,144 @@
+@import "../utilidades/variables-listas-dicionarios";
+@import "../utilidades/mixin";
+// Estilos para compra de artículo
+//-----------------------------------------------------
+.main-catalogo {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows:0.2fr 1.6fr;   
+    margin: 0 10%;
+    padding-bottom: 1%;
+    
+    .container-filtros{
+        margin: 5%;
+        background-color: white;
+        border-style: nth($border-list , 1 );
+        border-radius: 2%;
+        border-color: map-get($colors, footer-text);
+        color: map-get($colors, footer-text);
+
+    }
+    .container-filtros div{
+        height: 20px;
+    }
+    .container-filtros div h6{
+        text-align: center;
+    }
+
+    .container-productos{
+        background-color: white;
+        border-style: nth($border-list , 1 );
+        border-radius: 2%;
+        border-color: map-get($colors, footer-text);
+        color: map-get($colors, footer-text);
+        a{
+            text-decoration: none;
+            color: map-get($colors, footer-text);
+        }
+        
+        div img{
+            display: block;
+            max-width: 100%;
+            width: 80%;
+            margin: 10px auto;
+            height: auto;
+            border-radius: $border-radius;
+        }
+        div p{
+            text-align: center;
+            border-bottom: solid;
+            border-color: map-get($colors, footer-text);
+        }
+        div .texto-cierre{
+            border-bottom: none;
+        }
+
+    }
+
+   
+    .filtros{
+        @include flex;
+        height: 20px;
+        color: map-get($colors, footer-text);
+        justify-content: center;
+        column-gap: 5%;
+        
+        border-radius: nth($border-list, 2 );
+        
+    }
+    .grid-item {
+        display: none;
+      }
+
+
+}
+
+@media screen and (min-width: 600px) {
+    .main-catalogo { 
+        display: grid;
+        grid-template-columns: 0.4fr 1fr 1fr;
+        grid-template-rows: 0.07fr 1fr;   
+        margin: 0 10%;
+
+        .container-filtros{
+
+            .filtros{
+                flex-direction: column;
+                margin-top: 35px;
+                p{
+                    height: 10px;
+                    
+                }
+        }
+        }
+        .container-productos{
+            grid-column: 2 span;
+            margin-top: 1%;
+            grid-row: 2 span;
+            div p{
+                border-bottom: none;               
+            }
+        }
+        .grid-item {
+            display: block;
+          }
+    }
+
+}
+@media screen and (min-width: 1024px) {
+    .main-catalogo { 
+        
+        grid-template-rows: 0.25fr 1fr;   
+        min-height: 600px;
+        .container-filtros{
+
+            .filtros{
+                flex-direction: column;
+                margin-top: 35px;
+                p{
+                    margin-left: 10px;
+                }
+        }
+        }
+        .container-productos{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 0.5fr 1fr;  
+            justify-items: center; 
+            div img{
+                
+                max-width: 100%;
+                width: 70%;
+                margin: 10px auto;
+                height: auto;
+    
+            }
+
+        }
+        .grid-item {
+            display: block;
+          }
+    }
+}
+
+

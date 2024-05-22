@@ -1,0 +1,65 @@
+@import "../utilidades/variables-listas-dicionarios";
+@import "../utilidades/mixin";
+
+// Estilos para el Acerca de
+//-----------------------------------------------------
+.pag_construccion {
+    @include height-grid(72vh, grid);
+    grid-template-columns: 15% 70% 15%;
+    grid-template-rows: 10% 50%;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 10px;
+    border-radius: nth($border-list, 2 );
+    border-style: nth($border-list, 1 );
+    border-color: map-get($colors, footer-text);
+    margin: 0 5%;
+    padding-right: 6px;
+    gap: 1%;
+    background-color: white;
+
+    .grid-item{
+        display: none;
+    }
+  
+    .titulo-acerca-de {
+      grid-column: 3 span;
+    }
+    .maps{
+        grid-column: 3 span;
+    }
+  
+    .maps img {
+      @include img;
+      opacity: 0.7;
+    }
+  }
+  
+  @media screen and (min-width: 600px) {
+    .pag_construccion {
+        @include height-grid(90vh, grid);
+      grid-template-rows: 10% 70%;
+        .maps img {
+                    max-width: 100%;
+                    width: 95%;
+                    margin: 10px auto;
+                    height: auto;
+                    }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+  .pag_construccion {
+      @include height-grid(87vh, grid);
+      min-height: 570px;
+    grid-template-rows: 10% 90%;
+      .maps img {
+                  max-width: 100%;
+                  width: 80%;
+                  margin: 10px auto;
+                  height: auto;
+                  }
+  }
+}
+  

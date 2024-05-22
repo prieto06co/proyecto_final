@@ -4,7 +4,7 @@
 // Estilos para el Acerca de
 //-----------------------------------------------------
 .acerca-de {
-    @include height-grid(85vh, grid);
+    @include height-grid(87vh, grid);
     grid-template-columns: 15% 70% 15%;
     grid-template-rows: 15% 35% 30%;
     justify-items: center;

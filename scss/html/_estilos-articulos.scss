@@ -3,7 +3,7 @@
 // Estilos para compra de artículo
 //-----------------------------------------------------
 .main-articulos .contenedor-articulo {
-    @include height-grid(85vh, grid);
+    @include height-grid(87vh, grid);
     grid-template-rows: 40% 30%;
     justify-content: space-between;
     justify-items: center;
@@ -16,7 +16,7 @@
     div img {
       @include img;
       max-height: 100%;
-      max-width: 450px;
+      padding: 5px 0 ;
       border-radius: $border-radius;
     }
   
@@ -27,7 +27,7 @@
   
   @media screen and (min-width: 550px) {
     .main-articulos .contenedor-articulo {
-      @include height-grid(85vh, grid);
+      @include height-grid(87vh, grid);
       grid-template-columns: 65% 35%;
       grid-template-rows: 50% 30%;
     }
@@ -46,7 +46,7 @@
   }
   @media screen and (min-width: 990px) {
     .main-articulos .contenedor-articulo {
-      @include height-grid(85vh, grid);
+      @include height-grid(87vh, grid);
       grid-template-columns: 50% 45%;
       grid-template-rows: 55% 30%;
     }
