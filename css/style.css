@@ -141,7 +141,7 @@ header nav div h1 .empresa-logo {
   .index {
     height: 87vh;
     display: grid;
-    grid-template-columns: 0.85fr 1.1fr 1.1fr 0.85fr;
+    grid-template-columns: 0.85fr 1.05fr 1.05fr 0.85fr;
     grid-template-rows: 7% 32% 7% 25% 25%;
     padding: 0 18%;
     align-content: center;
